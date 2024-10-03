@@ -26,22 +26,23 @@ li {
   margin: 0;
 }
 
-header nav a {
+.nav-links a {
   text-decoration: none;
   color: purple;
 }
 
-header nav a:hover {
+.nav-links a:hover {
   color: rgb(82, 5, 82);
 }
 
 
-header nav ul {
+.nav-links ul {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2em;
 }
+
 
 footer {
   padding: 0.1em 1em 1em;
