@@ -1,19 +1,22 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const pageTitle = "Contact";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Contact</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
-    <Navigation />
+    <Header />
     <main>
-      <h1>Contact</h1>
+      <h1>{pageTitle}</h1>
+      <!-- Add your contact form or information here -->
     </main>
     <Footer />
   </body>

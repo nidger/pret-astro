@@ -75,3 +75,9 @@ h1 {
   color: purple;
   font-size: 4rem;
   }
+
+  .skill {
+    color: navy;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
