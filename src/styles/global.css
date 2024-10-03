@@ -43,6 +43,11 @@ header nav ul {
   gap: 2em;
 }
 
+footer {
+  background-color: #f1f5f9;
+  
+}
+
 .button {
   display: inline-block;
   padding: 0.2em 0.8em;
