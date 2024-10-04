@@ -48,13 +48,30 @@ li {
   height: 2px;
   margin-bottom: 4px;
   background-color: purple;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Active state for hamburger icon */
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Navigation Links */
 .nav-links {
   width: 100%;
   background-color: #f1f5f9;
-  display: none; /* Hide nav links by default on mobile */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
   margin-top: 2rem; /* Add space above the menu */
 }
 
@@ -76,7 +93,8 @@ li {
 
 /* Expanded Navigation (Mobile) */
 .nav-links.expanded {
-  display: block; /* Show nav links when expanded class is applied */
+  max-height: 300px; /* Adjust this value based on your menu's height */
+  opacity: 1;
 }
 
 /* Button Styles - Consolidated */
@@ -99,8 +117,11 @@ li {
   /* Navigation for desktop */
   .nav-links {
     margin-top: 0; /* Remove top margin for desktop */
-    display: block; /* Always show nav links on desktop */
+    max-height: none; /* Reset max-height */
+    opacity: 1; /* Always visible on desktop */
+    overflow: visible; /* Reset overflow */
     background: none; /* Remove background color on desktop */
+    transition: none; /* Remove transition for desktop */
   }
 
   /* Horizontal layout for nav links on desktop */
