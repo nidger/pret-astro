@@ -1,3 +1,4 @@
+/* Basic page styling */
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
@@ -11,10 +12,12 @@ body {
   line-height: 1.5;
 }
 
+/* Ensure all elements use border-box for consistent sizing */
 * {
   box-sizing: border-box;
 }
 
+/* Reset default list styles */
 ul, ol {
   list-style-type: none;
   padding: 0;
@@ -26,7 +29,7 @@ li {
   margin: 0;
 }
 
- /* Nav Styles */
+/* Navigation Styles */
 
 /* Hamburger Menu (Mobile) */
 .hamburger {
@@ -35,8 +38,10 @@ li {
   position: absolute;
   right: 0px;
   top: 20px;
+  display: block; /* Ensure hamburger is always visible on mobile */
 }
 
+/* Style for each line in the hamburger icon */
 .hamburger .line {
   display: block;
   width: 20px;
@@ -48,91 +53,33 @@ li {
 /* Navigation Links */
 .nav-links {
   width: 100%;
-  top: 5rem;
-  left: 0;
   background-color: #f1f5f9;
-  display: none;
-  margin: 0;
+  display: none; /* Hide nav links by default on mobile */
+  margin-top: 2rem; /* Add space above the menu */
 }
 
+/* Style for navigation links */
 .nav-links a {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center align text */
   padding: 10px 0;
   text-decoration: none;
   font-size: 1.2rem;
   color: purple;
 }
 
+/* Hover and focus states for nav links */
 .nav-links a:hover,
 .nav-links a:focus {
-  color: rgb(82, 5, 82);
+  background-color: rgba(128, 0, 128, 0.1);
 }
 
 /* Expanded Navigation (Mobile) */
-.expanded {
-  display: unset;
+.nav-links.expanded {
+  display: block; /* Show nav links when expanded class is applied */
 }
 
-/* Button Styles */
-.button {
-  display: inline-block;
-  padding: 1em .4em;
-  text-decoration: none;
-  color: purple;
-  border-radius: 4px;
-  border: solid 2px purple;
-  cursor: pointer;
-  line-height: 1;
-}
-
-.button:hover {
-  background-color: rgb(212, 181, 212);
-}
-
-/* Desktop Styles */
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 0;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
-
-  .nav-links ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 3em;
-  }
-
-  .nav-links a {
-    display: block;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-
-}
-
-
-footer {
-  padding: 0.1em 1em 1em;
-  background-color: rgb(223, 223, 223);
-}
-.social-links {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-}
-.social-links a {
-  color: rgb(0, 0, 238);
-  text-decoration: underline;
-}
-
+/* Button Styles - Consolidated */
 .button {
   display: inline-block;
   padding: 0.2em 0.8em;
@@ -142,17 +89,66 @@ footer {
   border: solid 2px purple;
   cursor: pointer;
 }
+
 .button:hover {
   background-color: rgb(212, 181, 212);
 }
 
+/* Desktop Styles */
+@media screen and (min-width: 636px) {
+  /* Navigation for desktop */
+  .nav-links {
+    margin-top: 0; /* Remove top margin for desktop */
+    display: block; /* Always show nav links on desktop */
+    background: none; /* Remove background color on desktop */
+  }
+
+  /* Horizontal layout for nav links on desktop */
+  .nav-links ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+  }
+
+  .nav-links a {
+    display: block; /* Reset display property for desktop */
+    padding: 0.5em 1em; /* Add padding for desktop */
+  }
+
+  /* Hide hamburger menu on desktop */
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Footer Styles */
+footer {
+  padding: 0.1em 1em 1em;
+  background-color: rgb(223, 223, 223);
+}
+
+/* Social Links in Footer */
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.social-links a {
+  color: rgb(0, 0, 238);
+  text-decoration: underline;
+}
+
+/* Heading Styles */
 h1 {
   color: purple;
   font-size: 4rem;
-  }
+}
 
-  .skill {
-    color: navy;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+/* Skill Highlight Style */
+.skill {
+  color: navy;
+  font-weight: bold;
+  text-transform: uppercase;
+}
